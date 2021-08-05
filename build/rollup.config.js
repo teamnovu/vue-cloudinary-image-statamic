@@ -70,7 +70,7 @@ if (!argv.format || argv.format === 'es') {
     ...baseConfig,
     external,
     output: {
-      file: 'dist/cloudinary-image.esm.js',
+      file: 'dist/cloudinary-image-statamic.esm.js',
       format: 'esm',
       exports: 'named',
     },
@@ -104,7 +104,7 @@ if (!argv.format || argv.format === 'cjs') {
     external,
     output: {
       compact: true,
-      file: 'dist/cloudinary-image.ssr.js',
+      file: 'dist/cloudinary-image-statamic.ssr.js',
       format: 'cjs',
       name: 'CloudinaryImage',
       exports: 'named',
@@ -133,7 +133,7 @@ if (!argv.format || argv.format === 'iife') {
     external,
     output: {
       compact: true,
-      file: 'dist/cloudinary-image.min.js',
+      file: 'dist/cloudinary-image-statamic.min.js',
       format: 'iife',
       name: 'CloudinaryImage',
       exports: 'named',
