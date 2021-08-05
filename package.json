@@ -1,6 +1,6 @@
 {
   "name": "@teamnovu/vue-cloudinary-image-statamic",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Statamic Adapter for @teamnovu/vue-cloudinary-image and @teamnovu/nuxt-cloudinary-image",
   "repository": "teamnovu/vue-cloudinary-image-statamic",
   "license": "MIT",
