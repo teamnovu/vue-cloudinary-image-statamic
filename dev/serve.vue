@@ -17,6 +17,13 @@ export default Vue.extend({
         width: 864,
         height: 576,
       },
+      assetWithFocusCss: {
+        permalink: '/sample.jpg',
+        alt: 'my alt',
+        focus_css: '100% 100%',
+        width: 864,
+        height: 576,
+      },
     }
   },
 })
@@ -26,6 +33,12 @@ export default Vue.extend({
   <div id="app">
     <AppImage
       :src="asset"
+      crop="fill"
+      :width="200"
+      :aspect-ratio="1"
+    />
+    <AppImage
+      :src="assetWithFocusCss"
       crop="fill"
       :width="200"
       :aspect-ratio="1"

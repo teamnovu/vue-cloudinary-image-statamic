@@ -63,7 +63,7 @@ export default {
         return this.focus
       }
 
-      if (!this.asset.focus) {
+      if (!this.asset.focus && !this.asset.focus_css) {
         return undefined
       }
 
@@ -71,7 +71,13 @@ export default {
         return undefined
       }
 
-      let [x, y] = this.asset.focus.split('-')
+      let x, y
+
+      if (this.asset.focus) {
+        [x, y] = this.asset.focus.split('-')
+      } else if (this.asset.focus_css) {
+        [x, y] = this.asset.focus_css.replaceAll('%', '').split(' ')
+      }
 
       if (parseInt(x) === 50 || parseInt(y) === 50) {
         return undefined
