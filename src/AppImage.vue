@@ -76,7 +76,7 @@ export default {
       if (this.asset.focus) {
         [x, y] = this.asset.focus.split('-')
       } else if (this.asset.focus_css) {
-        [x, y] = this.asset.focus_css.replaceAll('%', '').split(' ')
+        [x, y] = this.asset.focus_css.replace(/%/g, '').split(' ')
       }
 
       if (parseInt(x) === 50 || parseInt(y) === 50) {
