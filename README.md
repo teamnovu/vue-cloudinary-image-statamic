@@ -11,7 +11,7 @@ Statamic adapter for [@teamnovu/nuxt-cloudinary-image](https://github.com/teamno
 
 Install and configure either [@teamnovu/nuxt-cloudinary-image](https://github.com/teamnovu/nuxt-cloudinary-image) or [@teamnovu/vue-cloudinary-image](https://github.com/teamnovu/vue-cloudinary-image) first. Visit these projects for instructions.
 
-Make sure the asset includes `width`, `height` and `focal` data.
+Make sure the asset includes `width`, `height` and `focus` data.
 
 Example Statamic `CustomAsset`: 
 ```php
