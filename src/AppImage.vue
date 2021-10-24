@@ -5,6 +5,9 @@
     :src="assetUrl"
     :alt="assetAlt"
     v-bind="$attrs"
+    :width="imageWidth"
+    :height="imageHeight"
+    :aspect-ratio="aspectRatio"
   />
 </template>
 
@@ -25,6 +28,18 @@ export default {
 
     focus: {
       type: String,
+      default: undefined,
+    },
+    width: {
+      type: [String, Number],
+      default: undefined,
+    },
+    height: {
+      type: [String, Number],
+      default: undefined,
+    },
+    aspectRatio: {
+      type: Number,
       default: undefined,
     },
   },
@@ -87,6 +102,36 @@ export default {
       y = (y * this.asset.height) / 100
 
       return [parseInt(x), parseInt(y)]
+    },
+    imageWidth () {
+      if (this.width) {
+        return this.width
+      }
+
+      if ((this.asset.width && this.asset.height) || (this.asset.width && this.asset.aspectRatio)) {
+        return this.asset.width
+      }
+
+      if (this.asset.aspectRatio && this.asset.height && Number(this.asset.height) > 0) {
+        return this.asset.height * this.asset.aspectRatio
+      }
+
+      return undefined
+    },
+    imageHeight () {
+      if (this.height) {
+        return this.height
+      }
+
+      if ((this.asset.width && this.asset.height) || (this.asset.height && this.asset.aspectRatio)) {
+        return this.asset.height
+      }
+
+      if (this.asset.aspectRatio && this.asset.width && Number(this.asset.width) > 0) {
+        return this.asset.width / this.asset.aspectRatio
+      }
+
+      return undefined
     },
   },
 
