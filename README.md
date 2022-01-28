@@ -30,6 +30,23 @@ class CustomAsset extends Asset
 }
 ```
 
+Example Statamic GraphQL fragment:
+```graphql
+  fragment AssetImage on AssetInterface {
+    id
+    url
+    permalink
+    extension
+    is_image
+    focus_css
+    width
+    height
+    ... on Asset_Assets {
+      alt
+    }
+  }
+```
+
 ## Installation
 
 ```shell
