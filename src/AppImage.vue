@@ -5,16 +5,12 @@
     :src="assetUrl"
     :alt="assetAlt"
     v-bind="$attrs"
-    :width="imageWidth"
-    :height="imageHeight"
-    :aspect-ratio="aspectRatio"
+    :aspect-ratio="imageAspectRatio"
   />
 </template>
 
 <script>
 export default {
-  components: {},
-
   props: {
     src: {
       type: [String, Object],
@@ -133,8 +129,21 @@ export default {
 
       return undefined
     },
-  },
+    imageAspectRatio() {
+      if (this.aspectRatio) {
+        return this.aspectRatio
+      }
 
-  methods: {},
+      if (this.asset.aspectRatio) {
+        return this.asset.aspectRatio
+      }
+
+      if (this.imageWidth && this.imageHeight) {
+        return this.imageWidth / this.imageHeight
+      }
+
+      return undefined
+    },
+  },
 }
 </script>
