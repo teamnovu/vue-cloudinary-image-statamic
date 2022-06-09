@@ -90,7 +90,7 @@ export default {
         [x, y] = this.asset.focus_css.replace(/%/g, '').split(' ')
       }
 
-      if (parseInt(x) === 50 || parseInt(y) === 50) {
+      if (parseFloat(x) === 50 || parseFloat(y) === 50) {
         return undefined
       }
 
