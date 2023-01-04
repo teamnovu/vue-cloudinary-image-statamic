@@ -57,6 +57,8 @@ or
 npm i @teamnovu/vue-cloudinary-image-statamic
 ```
 
+For vue2 use a version < v1.0.0
+
 ## Setup
 
 ### Global
