@@ -4,10 +4,17 @@
   "description": "Statamic Adapter for @teamnovu/vue-cloudinary-image and @teamnovu/nuxt-cloudinary-image",
   "repository": "teamnovu/vue-cloudinary-image-statamic",
   "license": "MIT",
-  "main": "dist/cloudinary-image-statamic.ssr.js",
+  "main": "dist/cloudinary-image-statamic.esm.js",
   "browser": "dist/cloudinary-image-statamic.esm.js",
   "module": "dist/cloudinary-image-statamic.esm.js",
   "unpkg": "dist/cloudinary-image-statamic.min.js",
+  "exports": {
+    ".": {
+      "import": "./dist/cloudinary-image.esm.js",
+      "require": "./dist/cloudinary-image.ssr.js"
+    },
+    "./package.json": "./package.json"
+  },
   "files": [
     "dist/*",
     "src/**/*.vue"
