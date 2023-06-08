@@ -10,8 +10,8 @@
   "unpkg": "dist/cloudinary-image-statamic.min.js",
   "exports": {
     ".": {
-      "import": "./dist/cloudinary-image.esm.js",
-      "require": "./dist/cloudinary-image.ssr.js"
+      "import": "./dist/cloudinary-image-statamic.esm.js",
+      "require": "./dist/cloudinary-image-statamic.ssr.js"
     },
     "./package.json": "./package.json"
   },
