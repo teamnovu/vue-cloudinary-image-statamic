@@ -62,11 +62,7 @@ export default {
     },
 
     assetAlt () {
-      if (this.alt) {
-        return this.alt
-      }
-
-      return this.asset.alt
+      return this.alt || this.asset.alt || ''
     },
 
     imageFocus () {
@@ -129,7 +125,7 @@ export default {
 
       return undefined
     },
-    imageAspectRatio() {
+    imageAspectRatio () {
       if (this.aspectRatio) {
         return this.aspectRatio
       }
