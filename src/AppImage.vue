@@ -14,7 +14,7 @@ export default {
   props: {
     src: {
       type: [String, Object],
-      required: true,
+      required: false,
     },
 
     alt: {
