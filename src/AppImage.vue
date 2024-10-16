@@ -62,7 +62,16 @@ export default {
     },
 
     assetAlt () {
-      return this.alt || this.asset.alt || ''
+      if (this.alt) {
+        return this.alt
+      }
+
+      const locale = this.$i18n?.locale
+      if (this.asset[`alt_${locale}`]) {
+        return this.asset[`alt_${locale}`]
+      }
+
+      return this.asset.alt || ''
     },
 
     imageFocus () {
