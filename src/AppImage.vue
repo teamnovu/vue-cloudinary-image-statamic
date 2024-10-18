@@ -71,7 +71,7 @@ export default {
         return this.asset[`alt_${locale}`]
       }
 
-      return this.asset.alt || ''
+      return this.asset.alt ?? undefined
     },
 
     imageFocus () {
