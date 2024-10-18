@@ -4,14 +4,16 @@ Statamic adapter for [@teamnovu/nuxt-cloudinary-image](https://github.com/teamno
 
 ## Features
 ✅ Handles Statamic Image Assets  
-✅ Automatically applies `alt` attribute  
+✅ Automatically applies `alt` attribute for the current locale *
 ✅ Automatically applies Statamic focal point
+
+* For the i18n support, `alt_{langcode}` fields are assumed on asset blueprint and data. It will fallback to `alt` if not available.
 
 ## Prerequisites
 
 Install and configure either [@teamnovu/nuxt-cloudinary-image](https://github.com/teamnovu/nuxt-cloudinary-image) or [@teamnovu/vue-cloudinary-image](https://github.com/teamnovu/vue-cloudinary-image) first. Visit these projects for instructions.
 
-Make sure the asset includes `width`, `height` and `focus` data.
+Make sure the asset includes `width`, `height`, `focus` and the different `alt_{langcode}` data. 
 
 Example Statamic `CustomAsset`: 
 ```php
@@ -25,7 +27,7 @@ class CustomAsset extends Asset
 {
     protected function shallowAugmentedArrayKeys()
     {
-        return ['id', 'url', 'permalink', 'api_url', 'extension', 'is_image', 'focus', 'width', 'height'];
+        return ['id', 'url', 'permalink', 'api_url', 'extension', 'is_image', 'focus', 'width', 'height', 'alt_de', 'alt_fr'];
     }
 }
 ```
@@ -42,7 +44,8 @@ Example Statamic GraphQL fragment:
     width
     height
     ... on Asset_Assets {
-      alt
+      alt_de
+      alt_fr
     }
   }
 ```
