@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.6](https://github.com/teamnovu/vue-cloudinary-image-statamic/compare/v1.0.5...v1.0.6) (2025-09-30)
+
 ### [1.0.5](https://github.com/teamnovu/vue-cloudinary-image-statamic/compare/v1.0.4...v1.0.5) (2025-09-30)
 
 ### [0.1.1](https://github.com/teamnovu/vue-cloudinary-image-statamic/compare/v0.1.0...v0.1.1) (2022-06-09)
