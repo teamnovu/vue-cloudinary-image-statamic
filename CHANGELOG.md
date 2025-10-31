@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/teamnovu/vue-cloudinary-image-statamic/compare/v1.0.6...v1.1.0) (2025-10-31)
+
+
+### Features
+
+* set object position by default ([713f400](https://github.com/teamnovu/vue-cloudinary-image-statamic/commit/713f400c36717ad24c94ce5ecc55fa3bf4a4c3a9))
+
 ### [1.0.6](https://github.com/teamnovu/vue-cloudinary-image-statamic/compare/v1.0.5...v1.0.6) (2025-09-30)
 
 ### [1.0.5](https://github.com/teamnovu/vue-cloudinary-image-statamic/compare/v1.0.4...v1.0.5) (2025-09-30)
