@@ -6,6 +6,7 @@
     :alt="assetAlt"
     v-bind="$attrs"
     :aspect-ratio="imageAspectRatio"
+    :style="{ objectPosition: asset?.focus_css || 'center' }"
   />
 </template>
 
