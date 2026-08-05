@@ -33,7 +33,7 @@
     "@teamnovu/vue-cloudinary-image": "0.0.11",
     "@vue/cli-plugin-babel": "^4.3.1",
     "@vue/cli-plugin-eslint": "^4.5.9",
-    "@vue/cli-service": "^4.3.1",
+    "@vue/cli-service": "^5.0.9",
     "babel-eslint": "^10.0.1",
     "cross-env": "^7.0.2",
     "eslint": "^7.16.0",
